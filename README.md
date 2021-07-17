@@ -2,6 +2,12 @@
 
 These programs are written during the graphics and multimedia lab course.
 
+## Execution
+
+```bash
+g++ [FILENAME] -o [RANDOM].out -lGL -lGLU -lglut
+```
+
 ## Contents
 
 <!-- markdownlint-disable -->
