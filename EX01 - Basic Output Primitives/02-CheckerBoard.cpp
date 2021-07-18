@@ -61,7 +61,7 @@ void printCheckerBoard() {
         if(row&1)   start = 1;
         else        start = 0;
 
-        while(start < board_height) {
+        while(start < board_length) {
             printSquares(padding + start*step, padding + row*step, step);
             start += 2;
         }
