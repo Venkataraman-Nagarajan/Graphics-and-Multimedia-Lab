@@ -5,7 +5,8 @@ These programs are written during the graphics and multimedia lab course.
 ## Execution
 
 ```bash
-g++ [FILENAME] -o [RANDOM].out -lGL -lGLU -lglut
+g++ [FILENAME] -o [OUT-VARIABLE].out -lGL -lGLU -lglut
+./[OUT-VARIABLE].out 
 ```
 
 ## Contents
