@@ -31,7 +31,7 @@ g++ [FILENAME] -o [OUT-VARIABLE].out -lGL -lGLU -lglut
     <summary>EX 03 - Bresenham line drawing algorithm</summary>
     <ul>
         <li><a href="./EX03 - Bresenham's Line Drawing Algorithm/01-BresenhamSample.cpp">Sample input</a></li>
-        <li><a href="./EX02 - DDA Line Drawing Algorithm/02-BresenhamUser.cpp">User input</a></li>
+        <li><a href="./EX03 - Bresenham's Line Drawing Algorithm/02-BresenhamUser.cpp">User input</a></li>
     <ul>
 </details>
 <!-- markdownlint-enable -->
