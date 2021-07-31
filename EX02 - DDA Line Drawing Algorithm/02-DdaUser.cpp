@@ -60,7 +60,7 @@ void printLines() {
     cout << "\tx1 : "; cin>>x1;
     cout << "\ty1 : "; cin>>y1;
 
-    cout << "\nEnding point (x1, y1) \n";
+    cout << "\nEnding point (x2, y2) \n";
     cout << "\tx2 : "; cin>>x2;
     cout << "\ty2 : "; cin>>y2;
 
