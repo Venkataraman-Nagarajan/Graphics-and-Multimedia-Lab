@@ -80,25 +80,28 @@ void printBresenhamLine(ld x1, ld y1, ld x2, ld y2) {
     y1 = y1*scale + pad; 
     y2 = y2*scale + pad;
 
-    ld dx, dy, steps;
-    ld xInc, yInc, x, y, xEnd, p;
-
+    ld dx, dy;
+    ld x, y, xEnd, p, mirrorLine;
+    bool printMirror = false;
+    
     dx = abs(x2-x1);
     dy = abs(y2-y1);
 
     p = 2*dy - dx;
 
-    if(x1 > x2) {
-        x = x2;
-        y = y2;
-        xEnd = x1;
-    } else {
-        x = x1;
-        y = y1;
-        xEnd = x2;    
-    }
+    if(x1 > x2) swap(x1,x2), swap(y1, y2);
+
+    x = x1;
+    y = y1;
+    xEnd = x2;
 
     glVertex2d(x,y);
+
+    if(y1 > y2) {
+        mirrorLine = y;
+        printMirror = true;
+        y2 = y1 + (y1 - y2);
+    }
 
     while(x < xEnd) {
         x ++;
@@ -110,7 +113,8 @@ void printBresenhamLine(ld x1, ld y1, ld x2, ld y2) {
             p = 2*(dy-dx);
         }
 
-        glVertex2d(x,y);
+        if(printMirror) glVertex2d(x,mirrorLine - (y-mirrorLine));
+        else            glVertex2d(x,y);
         
     }
 }

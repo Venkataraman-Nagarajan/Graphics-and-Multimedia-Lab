@@ -102,10 +102,9 @@ void printBresenhamLine(ld x1, ld y1, ld x2, ld y2) {
     y2 = y2*scale + pad;
 
     ld dx, dy;
-    ld x, y, xEnd, p;
+    ld x, y, xEnd, p, mirrorLine;
     bool printMirror = false;
-    ld diff, oldY;
-
+    
     dx = abs(x2-x1);
     dy = abs(y2-y1);
 
@@ -120,10 +119,9 @@ void printBresenhamLine(ld x1, ld y1, ld x2, ld y2) {
     glVertex2d(x,y);
 
     if(y1 > y2) {
-        diff = y2 - y1;
-        oldY = y;
+        mirrorLine = y;
         printMirror = true;
-        y2 = y1 + diff;
+        y2 = y1 + (y1 - y2);
     }
 
     while(x < xEnd) {
@@ -136,7 +134,7 @@ void printBresenhamLine(ld x1, ld y1, ld x2, ld y2) {
             p = 2*(dy-dx);
         }
 
-        if(printMirror) glVertex2d(x,oldY - (y-oldY));
+        if(printMirror) glVertex2d(x,mirrorLine - (y-mirrorLine));
         else            glVertex2d(x,y);
         
     }
