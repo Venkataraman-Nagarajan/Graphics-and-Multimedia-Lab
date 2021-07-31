@@ -62,28 +62,28 @@ void printLines() {
     glBegin(GL_POINTS);
 
     // Case 1: +ve slope Left to Right line
-    
+    glColor3f(1.0f,0.0f,0.0f);     
     // | m | > 1
     printDDALine((ld)3,(ld)2, (ld)15,(ld)10);
     // | m | < 1
     printDDALine((ld)2,(ld)3, (ld)10,(ld)15);
 
     // Case 2: +ve slope Right to Left line
-    
+    glColor3f(0.5f,0.5f,0.0f);     
     // | m | > 1
     printDDALine((ld)-3,(ld)-2, (ld)-15,(ld)-10);
     // | m | < 1
     printDDALine((ld)-2,(ld)-3, (ld)-10,(ld)-15);
     
     //Case 3: -ve slope Left to Right line
-
+    glColor3f(0.0f,1.0f,0.0f);     
     // | m | > 1
     printDDALine((ld)3,(ld)-2, (ld)15,(ld)-10);
     // | m | < 1
     printDDALine((ld)2,(ld)-3, (ld)10,(ld)-15);
     
     //Case 4: -ve slope Right to Left line
-
+    glColor3f(0.0f,0.5f,0.5f);     
     // | m | > 1
     printDDALine((ld)-3,(ld)2, (ld)-15,(ld)10);
     // | m | < 1
