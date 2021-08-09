@@ -5,8 +5,7 @@ These programs are written during the graphics and multimedia lab course.
 ## Execution
 
 ```bash
-g++ [FILENAME] -o [OUT-VARIABLE].out -lGL -lGLU -lglut
-./[OUT-VARIABLE].out 
+g++ [FILENAME] -o [OUT-VARIABLE].out -lGL -lGLU -lglut && ./[OUT-VARIABLE].out 
 ```
 
 ## Contents
@@ -32,6 +31,13 @@ g++ [FILENAME] -o [OUT-VARIABLE].out -lGL -lGLU -lglut
     <ul>
         <li><a href="./EX03 - Bresenham's Line Drawing Algorithm/01-BresenhamSample.cpp">Sample input</a></li>
         <li><a href="./EX03 - Bresenham's Line Drawing Algorithm/02-BresenhamUser.cpp">User input</a></li>
+    <ul>
+</details>
+<details>
+    <summary>EX 04 - Midpoint circle drawing algorithm</summary>
+    <ul>
+        <li><a href="./EX04 - Midpoint Circle Algorithm/01-MidpointCircle.cpp">Drawing circle using Midpoint Algo.</a></li>
+        <li><a href="./EX04 - Midpoint Circle Algorithm/02-OmnitrixScribble.cpp">Custom Omnitrix using Lines and circles</a></li>
     <ul>
 </details>
 <!-- markdownlint-enable -->
