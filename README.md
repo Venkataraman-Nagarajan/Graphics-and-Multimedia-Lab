@@ -40,4 +40,14 @@ g++ [FILENAME] -o [OUT-VARIABLE].out -lGL -lGLU -lglut && ./[OUT-VARIABLE].out
         <li><a href="./EX04 - Midpoint Circle Algorithm/02-OmnitrixScribble.cpp">Custom Omnitrix using Lines and circles</a></li>
     <ul>
 </details>
+<details>
+    <summary>EX 05 - 2D Transformations</summary>
+    <ul>
+        <li><a href="./EX05 - 2D Transformations/01-Translation.cpp">Translation</a></li>
+        <li><a href="./EX05 - 2D Transformations/02-Rotation.cpp">Rotation</a></li>
+        <li><a href="./EX05 - 2D Transformations/03-Scaling.cpp">Scaling</a></li>
+        <li><a href="./EX05 - 2D Transformations/04-Reflection.cpp">Reflection</a></li>
+        <li><a href="./EX05 - 2D Transformations/05-Shearing.cpp">Shearing</a></li>
+    <ul>
+</details>
 <!-- markdownlint-enable -->
