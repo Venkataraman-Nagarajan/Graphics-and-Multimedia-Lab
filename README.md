@@ -50,4 +50,11 @@ g++ [FILENAME] -o [OUT-VARIABLE].out -lGL -lGLU -lglut && ./[OUT-VARIABLE].out
         <li><a href="./EX05 - 2D Transformations/05-Shearing.cpp">Shearing</a></li>
     <ul>
 </details>
+<details>
+    <summary>EX 06 - 2D Composite Transformations and Windowing</summary>
+    <ul>
+        <li><a href="./EX06 - 2D Composite Transforms and Windowing/01-CompositeTransforms.cpp">Composite Transformation</a></li>
+        <li><a href="./EX06 - 2D Composite Transforms and Windowing/02-WindowToViewport.cpp">Window to viewport conversion</a></li>
+    <ul>
+</details>
 <!-- markdownlint-enable -->
