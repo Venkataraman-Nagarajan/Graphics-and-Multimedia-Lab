@@ -1,0 +1,144 @@
+// Apply Cohen Sutherland line clipping on a line (x1,y1) (x2,y2) with respect to a clipping window 
+// (XWmin,YWmin) (XWmax,YWmax). 
+
+// After clipping with respect to an edge, display the line segment with the calculated intermediate 
+// intersection points and the vertex list. 
+
+// Input: The clipping window co-ordinates and the line endpoints 
+
+// Note: The output should show the clipping window and the line to be clipped in different colors. 
+
+// You can show the intermediate steps using time delay. 
+
+#include "__init__.h"
+#include <unistd.h>
+
+const ld PADDING = 0;
+const ld STEP = 10;
+const ld SCALE = 1;
+const ld PI = 3.14159265358979323846264338327950288419716939937510582;
+const ll SCREEN_FPS = 1;
+
+void myInit();
+void myDisplay();
+
+void LineCuttingAlgorithm();
+void LinePrinting(ll val);
+Line getLineInput();
+Window getWindowInput();
+
+vector<Line> lines;
+Window window;
+ll cou = 0;
+bool isLineAccepted;
+
+void runMainLoop(int val);
+
+int main(int argc,char* argv[]) {  
+    LineCuttingAlgorithm();           
+    glutInit(&argc,argv);             
+    glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);             
+    glutInitWindowSize(WINDOW_WIDTH,WINDOW_HEIGHT);             
+    glutCreateWindow("Cohen Sutherland");             
+    glutDisplayFunc(myDisplay);  
+    glutTimerFunc(1000/ SCREEN_FPS, runMainLoop, 0);            
+    myInit();             
+    glutMainLoop();             
+    return 1;         
+} 
+
+void myInit() {     
+    glClearColor(1.0,1.0,1.0,0.0);     
+    glColor3f(0.0f,0.0f,0.0f);     
+    glPointSize(5.0);     
+    glMatrixMode(GL_PROJECTION);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glEnable( GL_BLEND );     
+    glLoadIdentity();     
+    gluOrtho2D(X_MIN,X_MAX,Y_MIN,Y_MAX); 
+}     
+
+void runMainLoop(int val) {
+    myDisplay();
+    
+    glutTimerFunc(1000/ SCREEN_FPS, runMainLoop, 0);            
+}
+
+void myDisplay() {
+    glClear(GL_COLOR_BUFFER_BIT);
+    
+    LinePrinting(cou);
+    cou = (cou + 1)%(lines.size()+1);
+
+    glFlush();         
+}
+
+Window getWindowInput() {
+    ld X_MAX, X_MIN, Y_MAX, Y_MIN;
+
+    cout << "Enter Window Limits: \n";
+    cout << "\t X_MIN : "; cin >> X_MIN;
+    cout << "\t X_MAX : "; cin >> X_MAX;
+    cout << "\t Y_MIN : "; cin >> Y_MIN;
+    cout << "\t Y_MAX : "; cin >> Y_MAX;
+
+    return Window(X_MIN, X_MAX, Y_MIN, Y_MAX);
+}
+
+Line getLineInput() {
+    pld a,b;
+
+    cout << "\nEnter End-points of the line: \n";
+    cout << "\t A(x,y) : "; cin >> a.X >> a.Y;
+    cout << "\t B(x,y) : "; cin >> b.X >> b.Y;
+
+    return Line(a, b);
+}
+
+void LineCuttingAlgorithm() {
+    cout << "\t\t Cohen Sutherland Line Cutting \n\n";
+    
+    window = getWindowInput();
+    Line line = getLineInput();
+
+    // Handle corner cases of infinite looping at trivial reject
+    ll local_counter = 0;
+
+    do {
+        lines.push_back(line);
+        
+        CohenVector c = CohenVector();
+        CohenVector d = CohenVector();
+        
+        ll vec1 = c.calcCohenValue(line.A, window);
+        ll vec2 = d.calcCohenValue(line.B, window);
+        
+        if(c.trivialAccept(d)) {
+            isLineAccepted = true;
+            break;
+        }
+
+        
+        if(c.trivialReject(d)) {
+            isLineAccepted = false;
+            break;
+        }
+        
+        line = findIntersection(line, window);
+        
+        
+        local_counter ++;
+    } while(local_counter <= 5);
+
+}   
+
+void LinePrinting(ll i) {
+    if(i != lines.size()) {
+        window.displayFull(0,1,0);
+    } else {
+        window.displayWindow(0,0,0);
+    }
+
+    if(i < lines.size() -1 || isLineAccepted)
+        lines[min((ll)lines.size()-1,i)].display(1,0,0);
+}
