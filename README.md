@@ -57,4 +57,18 @@ g++ [FILENAME] -o [OUT-VARIABLE].out -lGL -lGLU -lglut && ./[OUT-VARIABLE].out
         <li><a href="./EX06 - 2D Composite Transforms and Windowing/02-WindowToViewport.cpp">Window to viewport conversion</a></li>
     <ul>
 </details>
+<details>
+    <summary>EX 07 - Cohen Sutherland Line clipping algorithm</summary>
+    <ul>
+        <li><a href="./EX07 - Cohen Sutherland/__init__.h">Common header for Cohen Sutherland</a></li>
+        <li><a href="./EX07 - Cohen Sutherland/01-Cohen Sutherland.cpp">Static Output</a></li>
+        <li><a href="./EX07 - Cohen Sutherland/02-CohenSutherland-Dynamic.cpp">Dynamic Output</a></li>
+    <ul>
+</details>
+<details>
+    <summary>EX 08 - 3D Transformations</summary>
+    <ul>
+        <li><a href="./EX08 - 3D Transformations/01-3DTranformations.cpp">Translation, Rotation and Scaling</a></li>
+    <ul>
+</details>
 <!-- markdownlint-enable -->
