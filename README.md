@@ -71,4 +71,10 @@ g++ [FILENAME] -o [OUT-VARIABLE].out -lGL -lGLU -lglut && ./[OUT-VARIABLE].out
         <li><a href="./EX08 - 3D Transformations/01-3DTranformations.cpp">Translation, Rotation and Scaling</a></li>
     <ul>
 </details>
+<details>
+    <summary>EX 09 - 3D Projections</summary>
+    <ul>
+        <li><a href="./EX09 - Parallel and Perspective projection/01-Projection.cpp">Parallel and Perspective Projection</a></li>
+    <ul>
+</details>
 <!-- markdownlint-enable -->
