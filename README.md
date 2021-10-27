@@ -84,4 +84,10 @@ g++ [FILENAME] -o [OUT-VARIABLE].out -lGL -lGLU -lglut && ./[OUT-VARIABLE].out
         <li><a href="./EEX11 - Image editing and Manipulation/2 - Animated GIF">Animated GIF</a></li>
     <ul>
 </details>
+<details>
+    <summary>EX 12 - GIMP - 2D Animation</summary>
+    <ul>
+        <li><a href="./EX12 - Creating 2D animation">2D Animation</a></li>
+    <ul>
+</details>
 <!-- markdownlint-enable -->
