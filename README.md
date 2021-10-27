@@ -77,4 +77,11 @@ g++ [FILENAME] -o [OUT-VARIABLE].out -lGL -lGLU -lglut && ./[OUT-VARIABLE].out
         <li><a href="./EX09 - Parallel and Perspective projection/01-Projection.cpp">Parallel and Perspective Projection</a></li>
     <ul>
 </details>
+<details>
+    <summary>EX 11 - GIMP - Image Editing and Manipulation</summary>
+    <ul>
+        <li><a href="./EX11 - Image editing and Manipulation/1 - Filter, Noise and Mask">Filters, Noise and Mask</a></li>
+        <li><a href="./EEX11 - Image editing and Manipulation/2 - Animated GIF">Animated GIF</a></li>
+    <ul>
+</details>
 <!-- markdownlint-enable -->
