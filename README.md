@@ -78,6 +78,12 @@ g++ [FILENAME] -o [OUT-VARIABLE].out -lGL -lGLU -lglut && ./[OUT-VARIABLE].out
     <ul>
 </details>
 <details>
+    <summary>EX 10 - 3D Scene</summary>
+    <ul>
+        <li><a href="./EX10 - Lighting, Textures in 3D Scene/01-3DScene.cpp">3D Scene</a></li>
+    <ul>
+</details>
+<details>
     <summary>EX 11 - GIMP - Image Editing and Manipulation</summary>
     <ul>
         <li><a href="./EX11 - Image editing and Manipulation/1 - Filter, Noise and Mask">Filters, Noise and Mask</a></li>
