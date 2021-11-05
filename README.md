@@ -96,4 +96,16 @@ g++ [FILENAME] -o [OUT-VARIABLE].out -lGL -lGLU -lglut && ./[OUT-VARIABLE].out
         <li><a href="./EX12 - Creating 2D animation">2D Animation</a></li>
     <ul>
 </details>
+<details>
+    <summary>Lab Test</summary>
+    <ul>
+        <li><a href="./EX13 - GM Lab test/192_GM_LAB_TEST_01.pdf">Draw a Clown</a></li>
+    <ul>
+</details>
+<details>
+    <summary>Models</summary>
+    <ul>
+        <li><a href="./EX14 - GM Model Lab/Models.pdf">2D Animation</a></li>
+    <ul>
+</details>
 <!-- markdownlint-enable -->
