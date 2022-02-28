@@ -80,7 +80,7 @@ void myDisplay() {
 void myTimer(int i) {
     update();
     glutPostRedisplay();
-    myDisplay();
+    //myDisplay();
 
     glutTimerFunc(1000/SCREEN_FPS, myTimer, 0);
 }
